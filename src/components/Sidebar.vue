@@ -7,7 +7,7 @@ const activeClass = ref(
   'bg-gray-600 bg-opacity-25 text-gray-100 border-gray-100',
 )
 const inactiveClass = ref(
-  'border-gray-900 text-gray-500 hover:bg-gray-600 hover:bg-opacity-25 hover:text-gray-100',
+  'border-gray-900 text-gray-100 hover:bg-gray-600 hover:bg-opacity-30 hover:text-gray-100',
 )
 </script>
 
@@ -23,11 +23,11 @@ const inactiveClass = ref(
 
     <div
       :class="isOpen ? 'translate-x-0 ease-out' : '-translate-x-full ease-in'"
-      class="fixed inset-y-0 left-0 z-30 w-64 overflow-y-auto transition duration-300 transform bg-gray-900 lg:translate-x-0 lg:static lg:inset-0"
+      class="fixed inset-y-0 left-0 z-30 w-64 overflow-y-auto transition duration-300 transform bg-blue-600 lg:translate-x-0 lg:static lg:inset-0"
     >
       <div class="flex items-center justify-center mt-8">
         <div class="flex items-center">
-          <svg
+          <!-- <svg
             class="w-12 h-12"
             viewBox="0 0 512 512"
             fill="none"
@@ -45,15 +45,15 @@ const inactiveClass = ref(
               d="M201.694 387.105C231.686 417.098 280.312 417.098 310.305 387.105C325.301 372.109 332.8 352.456 332.8 332.8C332.8 313.144 325.301 293.491 310.305 278.495C295.309 263.498 288 256 275.2 230.4C256 243.2 243.201 320 243.201 345.6C201.694 345.6 179.2 332.8 179.2 332.8C179.2 352.456 186.698 372.109 201.694 387.105Z"
               fill="white"
             />
-          </svg>
+          </svg> -->
 
-          <span class="mx-2 text-2xl font-semibold text-white">V-Dashboard</span>
+          <span class="mx-2 text-2xl font-semibold text-white">TESDA</span>
         </div>
       </div>
 
       <nav class="mt-10">
         <router-link
-          class="flex items-center px-6 py-2 mt-4 duration-200 border-l-4"
+          class="flex items-center px-6 py-2 mt-4 duration-200"
           :class="[$route.name === 'Dashboard' ? activeClass : inactiveClass]"
           to="/dashboard"
         >
@@ -77,9 +77,9 @@ const inactiveClass = ref(
         </router-link>
 
         <router-link
-          class="flex items-center px-6 py-2 mt-4 duration-200 border-l-4"
-          :class="[$route.name === 'UIElements' ? activeClass : inactiveClass]"
-          to="/ui-elements"
+          class="flex items-center px-6 py-2 mt-4 duration-200"
+          :class="[$route.name === 'Inventory' ? activeClass : inactiveClass]"
+          to="/Inventory"
         >
           <svg
             class="w-5 h-5"
@@ -105,13 +105,13 @@ const inactiveClass = ref(
             />
           </svg>
 
-          <span class="mx-4">UI Elements</span>
+          <span class="mx-4">Inventory</span>
         </router-link>
 
         <router-link
-          class="flex items-center px-6 py-2 mt-4 duration-200 border-l-4"
-          :class="[$route.name === 'Tables' ? activeClass : inactiveClass]"
-          to="/tables"
+          class="flex items-center px-6 py-2 mt-4 duration-200"
+          :class="[$route.name === 'person' ? activeClass : inactiveClass]"
+          to="/person"
         >
           <svg
             class="w-5 h-5"
@@ -133,13 +133,13 @@ const inactiveClass = ref(
             />
           </svg>
 
-          <span class="mx-4">Tables</span>
+          <span class="mx-4">Person</span>
         </router-link>
 
         <router-link
-          class="flex items-center px-6 py-2 mt-4 duration-200 border-l-4"
-          :class="[$route.name === 'Forms' ? activeClass : inactiveClass]"
-          to="/forms"
+          class="flex items-center px-6 py-2 mt-4 duration-200"
+          :class="[$route.name === 'Reports' ? activeClass : inactiveClass]"
+          to="/Reports"
         >
           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
             <path
@@ -152,11 +152,11 @@ const inactiveClass = ref(
             />
           </svg>
 
-          <span class="mx-4">Forms</span>
+          <span class="mx-4">Reports</span>
         </router-link>
 
         <router-link
-          class="flex items-center px-6 py-2 mt-4 duration-200 border-l-4"
+          class="flex items-center px-6 py-2 mt-4 duration-200"
           :class="[$route.name === 'Cards' ? activeClass : inactiveClass]"
           to="/cards"
         >
@@ -169,9 +169,9 @@ const inactiveClass = ref(
         </router-link>
 
         <router-link
-          class="flex items-center px-6 py-2 mt-4 duration-200 border-l-4"
-          :class="[$route.name === 'Modal' ? activeClass : inactiveClass]"
-          to="/modal"
+          class="flex items-center px-6 py-2 mt-4 duration-200"
+          :class="[$route.name === 'Database' ? activeClass : inactiveClass]"
+          to="/Database"
         >
           <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
             <path d="M3 12v3c0 1.657 3.134 3 7 3s7-1.343 7-3v-3c0 1.657-3.134 3-7 3s-7-1.343-7-3z" />
@@ -179,13 +179,13 @@ const inactiveClass = ref(
             <path d="M17 5c0 1.657-3.134 3-7 3S3 6.657 3 5s3.134-3 7-3 7 1.343 7 3z" />
           </svg>
 
-          <span class="mx-4">Modal</span>
+          <span class="mx-4">Database</span>
         </router-link>
 
         <router-link
-          class="flex items-center px-6 py-2 mt-4 duration-200 border-l-4"
-          :class="[$route.name === 'Blank' ? activeClass : inactiveClass]"
-          to="/blank"
+          class="flex items-center px-6 py-2 mt-4 duration-200"
+          :class="[$route.name === 'settings' ? activeClass : inactiveClass]"
+          to="/settings"
         >
           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
             <path
@@ -193,7 +193,7 @@ const inactiveClass = ref(
             />
           </svg>
 
-          <span class="mx-4">Blank</span>
+          <span class="mx-4">Settings</span>
         </router-link>
       </nav>
     </div>

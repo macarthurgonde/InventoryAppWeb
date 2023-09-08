@@ -3,8 +3,8 @@ import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
-const email = ref('johndoe@mail.com')
-const password = ref('@#!@#asdf1231!_!@#')
+const email = ref('admin@gmail.com')
+const password = ref('admin')
 
 function login() {
   router.push('/dashboard')
@@ -12,10 +12,10 @@ function login() {
 </script>
 
 <template>
-  <div class="flex items-center justify-center h-screen px-6 bg-gray-200">
+  <div class="flex items-center justify-center h-screen px-6 bg-gradient-to-r from-sky-500 to-indigo-500">
     <div class="w-full max-w-sm p-6 bg-white rounded-md shadow-md">
       <div class="flex items-center justify-center">
-        <svg
+        <!-- <svg
           class="w-10 h-10"
           viewBox="0 0 512 512"
           fill="none"
@@ -33,8 +33,8 @@ function login() {
             d="M201.694 387.105C231.686 417.098 280.312 417.098 310.305 387.105C325.301 372.109 332.8 352.456 332.8 332.8C332.8 313.144 325.301 293.491 310.305 278.495C295.309 263.498 288 256 275.2 230.4C256 243.2 243.201 320 243.201 345.6C201.694 345.6 179.2 332.8 179.2 332.8C179.2 352.456 186.698 372.109 201.694 387.105Z"
             fill="white"
           />
-        </svg>
-        <span class="text-2xl font-semibold text-gray-700">V-Dashboard</span>
+        </svg> -->
+        <span class="text-2xl font-semibold text-gray-700">Inventory System Login</span>
       </div>
 
       <form class="mt-4" @submit.prevent="login">

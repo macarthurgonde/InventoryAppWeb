@@ -2,13 +2,13 @@ import type { RouteRecordRaw } from 'vue-router'
 import { createRouter, createWebHistory } from 'vue-router'
 
 import Dashboard from './views/Dashboard.vue'
-import Forms from './views/Forms.vue'
-import Tables from './views/Tables.vue'
+import Inventory from './views/Inventory.vue'
+import person from './views/personList.vue'
 import UIElements from './views/UIElements.vue'
 import Login from './views/Login.vue'
-import Modal from './views/Modal.vue'
-import Card from './views/Card.vue'
-import Blank from './views/Blank.vue'
+import Database from './views/Database.vue'
+import Reports from './views/Reports.vue'
+import settings from './views/settings.vue'
 
 const routes: RouteRecordRaw[] = [
   {
@@ -23,19 +23,19 @@ const routes: RouteRecordRaw[] = [
     component: Dashboard,
   },
   {
-    path: '/forms',
-    name: 'Forms',
-    component: Forms,
+    path: '/Inventory',
+    name: 'Inventory',
+    component: Inventory,
   },
   {
-    path: '/cards',
-    name: 'Cards',
-    component: Card,
+    path: '/person',
+    name: 'person',
+    component: person,
   },
   {
-    path: '/tables',
-    name: 'Tables',
-    component: Tables,
+    path: '/Reports',
+    name: 'Reports',
+    component: Reports,
   },
   {
     path: '/ui-elements',
@@ -43,14 +43,14 @@ const routes: RouteRecordRaw[] = [
     component: UIElements,
   },
   {
-    path: '/modal',
-    name: 'Modal',
-    component: Modal,
+    path: '/Database',
+    name: 'Database',
+    component: Database,
   },
   {
-    path: '/blank',
-    name: 'Blank',
-    component: Blank,
+    path: '/settings',
+    name: 'settings',
+    component: settings,
   },
 ]
 
